@@ -1,0 +1,37 @@
+In Docker, both images and containers play crucial roles, but they serve different purposes in the context of containerization. Here are the key differences between Docker images and containers:
+
+### Docker Images:
+
+. lightweight, standalone, and executable software package that includes everything needed
+ to run a piece of software, including the code, a runtime, libraries, environment variables, and config files. 
+ It's a snapshot of a file system and parameters needed to run a program.
+
+. are not mutable. Once created, they do not change. 
+If you need to make changes, you create a new image with the necessary modifications.
+
+.stored in a Docker registry, which can be either the public Docker Hub or a private registry. 
+They can be versioned and shared across different environments.
+
+. used to create containers. 
+They serve as a blueprint for creating a running instance of an application with all its dependencies.
+
+. examples: an Ubuntu Linux distribution, a web server like Nginx, a database server like MySQL, 
+or a custom application packaged with its runtime and dependencies.
+
+### Docker Containers:
+
+. runnable instance of a Docker image. 
+It encapsulates the application and its dependencies, isolates it from the host system, and provides a consistent 
+runtime environment.
+
+. are mutable and can change their state while running. You can start, stop, restart, delete, and modify containers.
+
+. run on the host system and use the host's file system for read/write operations. 
+However, the container itself is isolated from the host and other containers, ensuring a degree of security and consistency.
+
+. are the runtime instances of images. They allow applications to run in isolated environments,
+ making them portable and ensuring consistent behavior across different environments.
+
+. eg. Using an Ubuntu image, you can create multiple containers, each running a different process or application. 
+For example, one container could run a web server, and another container could run a database server, 
+both based on the same Ubuntu image but serving different purposes.
